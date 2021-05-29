@@ -1,0 +1,26 @@
+{
+  "name": "team_profile_generator",
+  "version": "1.0.0",
+  "description": "The purpose of this project is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlCharl88/Team_Profile_Generator.git"
+  },
+  "author": "AlCharl88",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlCharl88/Team_Profile_Generator/issues"
+  },
+  "homepage": "https://github.com/AlCharl88/Team_Profile_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0",
+    "jest": "^27.0.3"
+  }
+}
