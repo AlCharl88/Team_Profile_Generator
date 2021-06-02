@@ -126,14 +126,15 @@ const generateEngineers = () => {
     cards += 
     `<div class="col">
       <div class="card"
-       <div class="card-header bg-success text-white>
+        <div class="card-header bg-danger text-white>
          <h1>${newEng.name}</h1>
          <h2 class="card-title">${newEng.getRole()}</h2>
+        </div>
        <div class="card-body">
          <ul class="list-group">
           <li class="list-group-item">ID: ${newEng.id}</li>
           <li class="list-group-item">Email: <a href="mailto:${newEng.email}" target="_blanc"</a></li>
-          <li class="list-group-item">Github username: <a href="https://github.com/${newEng.github}" target="_blanc"</li>
+          <li class="list-group-item">Github: <a href="https://github.com/${newEng.github}" target="_blanc"</li>
          </ul>
        </div>
       </div>
@@ -150,14 +151,15 @@ const generateInterns = () => {
     cards += 
     `<div class="col">
       <div class="card"
-       <div class="card-header bg-success text-white>
+       <div class="card-header bg-warning text-white>
          <h1>${newInt.name}</h1>
          <h2 class="card-title">${newInt.getRole()}</h2>
+       </div>
        <div class="card-body">
          <ul class="list-group">
-          <li class="list-group-item">ID:${newInt.id}</li>
+          <li class="list-group-item">ID: ${newInt.id}</li>
           <li class="list-group-item">Email: <a href="mailto:${newInt.email}" target="_blanc"</a></li>
-          <li class="list-group-item">School name:${newInt.school}"</li>
+          <li class="list-group-item">School: ${newInt.school}"</li>
          </ul>
        </div>
       </div>
@@ -189,16 +191,21 @@ const generateHTML = async () => {
     <body>
       <div class="container">
         <div class="row">
-        <div class="col header bg-info text-white text-center">
-        <h1>TEAM PROFILE GENERATOR</h1></div>
+         <div class="col header bg-info text-white text-center">
+          <h1>TEAM PROFILE GENERATOR</h1>
+         </div>
         </div>
         <div class="row">
           <div class="col">
-          ${mgr.generateManager(managers[0].mgroffice)} 
+           ${mgr.generateManager(managers[0].mgroffice)} 
           </div>
-          ${generateEngineers()}
-          ${generateInterns()}
+          <div class="col"
+           ${generateEngineers()}
           </div>
+          <div class="col"
+           ${generateInterns()}
+          </div>
+        </div>
         <div class="row">
          <div class="col footer text-white text-center bg-secondary rounded-bottom">
           <p>Copyright &copy; 2021 </p>

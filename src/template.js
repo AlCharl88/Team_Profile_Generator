@@ -14,13 +14,14 @@ class Template {
 
     generateManager(office) {
         let card = "";
-        let newMgr = new Manager(this.name, this.id, this.email, office)
+        let newMgr = new Manager(this.name,this.id,this.email,office);
 
         card = 
         `<div class="card">
            <div class="card-header bg-success text-white>
-             <h1>${newMgr.name}</h1>
-             <h2 class="card-title">${newMgr.getRole()}</h2>
+             <h1>${this.name}</h1>
+             <h2>${newMgr.getRole()}</h2>
+           </div>
            <div class="card-body">
              <ul class="list-group">
               <li class="list-group-item">ID: ${newMgr.id}</li>
@@ -28,7 +29,7 @@ class Template {
               <li class="list-group-item">Office number: ${newMgr.officeNumber}</li>
              </ul>
            </div>
-         </div>`
+        </div>`
 
          return card;
     }
