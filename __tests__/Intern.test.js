@@ -1,16 +1,18 @@
-const Intern = require('../lib/Intern');
+const Intern = require("../lib/Intern");
 
-describe('Engineer', () => {
-    describe('Initialization', () => {
+describe("Intern", () => {
+    describe("Initialization", () => {
         it("should create an object with a name, id and email property set", () => {
             const name = "Stacy Joyce";
             const id = 1236;
-            const email = "alctagne@gmail.com";
-            const intern = new Intern(name, id, email, "Polson");
+            const email = "stacyjoyce@gmail.com";
+            const school = "Polson";
+            const student = new Intern(name, id, email, school);
 
-            expect(intern.name).toEqual("Alain Tagne");
-            expect(intern.id).toEqual(1236);
-            expect(intern.email).toEqual("nobodem@gmail.com");
+            expect(student.name).toEqual("Stacy Joyce");
+            expect(student.id).toEqual(1236);
+            expect(student.email).toEqual("stacyjoyce@gmail.com");
+            expect(student.school).toEqual("Polson");
         })
     });
 
@@ -19,8 +21,9 @@ describe('Engineer', () => {
             const name = "Stacy Joyce";
             const id = 1236;
             const email = "nobodem@gmail.com";
-            const intern = new Intern(name, id, email, "Polson");
-            const result = intern.getRole();
+            const school = "Polson";
+            const student = new Intern(name, id, email, school);
+            const result = student.getRole();
 
             expect(result).toEqual("Intern");
         })
@@ -30,9 +33,10 @@ describe('Engineer', () => {
         it('should return the school name of the intern', () => {
             const name = "Stacy Joyce";
             const id = 1236;
-            const email = "nobodem@gmail.com";
-            const intern = new Intern(name, id, email, "Polson");
-            const result = intern.getSchool();
+            const email = "stacyjoyce@gmail.com";
+            const school = "Polson";
+            const student = new Intern(name, id, email, school);
+            const result = student.getSchool();
 
             expect(result).toEqual("Polson");
         })

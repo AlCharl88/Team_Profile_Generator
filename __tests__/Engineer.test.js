@@ -1,16 +1,19 @@
 const Engineer = require('../lib/Engineer');
 
-describe('Engineer', () => {
-    describe('Initialization', () => {
+describe("Engineer", () => {
+    describe("Initialization", () => {
         it("should create an object with a name, id and email property set", () => {
             const name = "Alain Tagne";
             const id = 1235;
             const email = "alctagne@gmail.com";
-            const engineer = new Engineer(name, id, email);
+            const github = "Alcharl88"
+            const eng = new Engineer(name, id, email, github);
 
-            expect(engineer.name).toEqual("Alain Tagne");
-            expect(engineer.id).toEqual(1235);
-            expect(engineer.email).toEqual("alctagne@gmail.com");
+            expect(eng.name).toEqual("Alain Tagne");
+            expect(eng.id).toEqual(1235);
+            expect(eng.email).toEqual("alctagne@gmail.com");
+            expect(eng.github).toEqual("Alcharl88");
+
         })
     });
 
@@ -19,8 +22,9 @@ describe('Engineer', () => {
             const name = "Alain Tagne";
             const id = 1235;
             const email = "alctagne@gmail.com";
-            const employee = new Engineer(name, id, email, "Alcharl88");
-            const result = employee.getRole();
+            const github = "Alcharl88"
+            const emp = new Engineer(name, id, email, github);
+            const result = emp.getRole();
 
             expect(result).toEqual("Engineer");
         })
@@ -31,8 +35,9 @@ describe('Engineer', () => {
             const name = "Alain Tagne";
             const id = 1235;
             const email = "alctagne@gmail.com";
-            const employee = new Engineer(name, id, email, "Alcharl88");
-            const result = employee.getGithub();
+            const github = "Alcharl88"
+            const emp = new Engineer(name, id, email, github);
+            const result = emp.getGithub();
 
             expect(result).toEqual("Alcharl88");
         })
