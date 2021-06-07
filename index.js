@@ -15,25 +15,25 @@ const promptEngineers = () => {
  return inquirer.prompt([
     {
         type: 'input',
-        name: 'Engineer',
+        name: 'engineer',
         message: 'Enter the name of the Engineer',
     },
 
     {
         type: 'input',
-        name: 'Engineer-id',
+        name: 'engid',
         message: 'Enter the id of the Engineer',
     },
 
     {
         type: 'input',
-        name: 'Engineer-email',
+        name: 'engemail',
         message: 'Enter the email of the engineer',
     },
 
     {
         type: 'input',
-        name: 'Engineer-Github',
+        name: 'enggithub',
         message: 'Enter the Github username of the Engineer',
     },
 
@@ -51,25 +51,25 @@ const promptInterns = () => {
  return inquirer.prompt([
     {
         type: 'input',
-        name: 'Intern',
+        name: 'intern',
         message: 'Enter the name of the Intern',
     },
 
     {
         type: 'input',
-        name: 'Intern-id',
+        name: 'intid',
         message: 'Enter the id of the Intern',
     },
 
     {
         type: 'input',
-        name: 'Intern-email',
+        name: 'intemail',
         message: 'Enter the email of the Intern',
     },
 
     {
         type: 'input',
-        name: 'Intern-School',
+        name: 'intschool',
         message: 'Enter the School name of the Intern',
     },
 
@@ -87,25 +87,25 @@ const promptManager = () => {
  return inquirer.prompt([
     {
         type: 'input',
-        name: 'Manager',
+        name: 'manager',
         message: 'Enter the name of the Manager',
     },
 
     {
         type: 'input',
-        name: 'Manager-id',
+        name: 'mgrid',
         message: 'Enter the id of the Manager',
     },
 
     {
         type: 'input',
-        name: 'Manager-email',
+        name: 'mgremail',
         message: 'Enter the email of the Manager',
     },
 
     {
         type: 'input',
-        name: 'Manager-office number',
+        name: 'mgroffice',
         message: 'Enter the office number of the manager',
     },
 
